@@ -1,0 +1,22 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "swapwho-swapper-db": {
+    "name": "swapwho-swapper-db",
+    "connector": "mongodb"
+  },
+  "swapwho-category-db": {
+    "name": "swapwho-category-db",
+    "connector": "mongodb"
+  },
+  "swapwho-stats-db": {
+    "name": "swapwho-stats-db",
+    "connector": "mongodb"
+  },
+  "swapwho-item-db": {
+    "name": "swapwho-item-db",
+    "connector": "mongodb"
+  }
+}

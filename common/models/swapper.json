@@ -1,0 +1,63 @@
+{
+  "name": "Swapper",
+  "plural": "Swappers",
+  "base": "User",
+  "idInjection": true,
+  "properties": {
+    "fname": {
+      "type": "string",
+      "required": true
+    },
+    "lname": {
+      "type": "string",
+      "required": true
+    },
+    "item": {
+      "type": "object"
+    },
+    "contact": {
+      "type": "object"
+    },
+    "photo": {
+      "type": "string"
+    },
+    "location": {
+      "type": "object"
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "tags": {
+      "type": "object"
+    },
+    "favorites": {
+      "type": "object"
+    },
+    "passions": {
+      "type": "object"
+    },
+    "searches": {
+      "type": "object"
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "sitem": {
+      "type": "object"
+    },
+    "about": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "object"
+    },
+    "dor": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

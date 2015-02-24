@@ -1,0 +1,21 @@
+{
+  "name": "Statistics",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "timestamp": {
+      "type": "object",
+      "required": true
+    },
+    "search": {
+      "type": "string"
+    },
+    "nclicks": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

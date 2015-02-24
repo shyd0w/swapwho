@@ -1,0 +1,16 @@
+<div ng-controller="ItemController" class="container-fluid">
+<h3>Created Items</h3>
+    <hr>
+    <div ng-show="items.length == 0">
+        <div class="alert alert-info" role="alert">You have no items! Why don't you &nbsp;<button class="btn-primary btn" ui-sref="createitem">add</button>&nbsp; some?</div>
+    </div>
+    <div class="list-group">
+        <a class="list-group-item" ng-repeat="item in items">
+        &nbsp;<span class="item-name">{{item.name}}</span>&nbsp;|
+        &nbsp;<span class="item-category"></span>{{item.category}}&nbsp;|
+        &nbsp;<span class="item-description"></span>{{item.description}}&nbsp;|
+        &nbsp;<span class="item-tags"></span>{{item.tags}}&nbsp;
+    <i class="glyphicon glyphicon-remove pull-right"
+        ng-click="removeItem(item)"></i></a>
+    </div>
+</div>

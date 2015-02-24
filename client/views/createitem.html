@@ -1,0 +1,42 @@
+<div ng-controller="ItemController" class="container-fluid">
+    <h3>Create An Item</h3>
+    <hr>
+    <form name="itemForm" novalidate ng-submit="addItem()">
+        <div class="form-group" ng-class="{'has-error': 
+        itemForm.name.$invalid && itemForm.name.$dirty ||
+        itemForm.category.$invalid && itemForm.category.$dirty ||
+        itemForm.description.$invalid && itemForm.description.$dirty
+        }">
+
+            <input type="text" class="form-control focus" name="name" placeholder="Item Name" autocomplete="off" required ng-model="newItem.name">
+            <br />
+            <select class="form-control focus" name="category" placeholder="Item Category" autocomplete="off" required ng-model="newItem.category">
+            </select>
+            <br />
+            <input type="text" class="form-control focus" name="description" placeholder="Item Description" autocomplete="off" required ng-model="newItem.description">
+            <br />
+            <input type="text" class="form-control focus" name="tags" placeholder="Item Tags" autocomplete="off" required ng-model="tag">
+            <br />
+            <button type="button" class="btn btn-default" id="AddTag" ng-click="addTag(addtags.tag)">Add Tag</button>
+            <br />
+            <a class="list-group-item" ng-repeat="tag in addtags | orderBy:'id':true">
+        &nbsp;<span class="item-id">{{addtags.id}}</span>&nbsp;|
+        &nbsp;<span class="item-name">{{addtags.tagname}}</span>
+        <i class="glyphicon glyphicon-remove pull-right"
+        ng-click="removeTag(item)">
+        </i>
+        </a>
+            <br />
+            <span class="has-error control-label" ng-show="
+            itemForm.name.$invalid && itemForm.name.$dirty ||
+            itemForm.category.$invalid && itemForm.category.$dirty ||
+            itemForm.description.$invalid && itemForm.description.$dirty
+        ">
+      All Content to add an item is required.
+    </span>
+        </div>
+        <br />
+        <button class="btn btn-default" ng-disabled="itemForm.$invalid">Add Item</button>
+    </form>
+    <hr>
+</div>
